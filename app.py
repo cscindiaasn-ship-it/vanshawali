@@ -25,7 +25,7 @@ def init_db():
     )''')
     if c.execute('SELECT COUNT(*) FROM family').fetchone()[0] == 0:
         c.execute('INSERT INTO family(id,title,family_name,village,police_station,district,state) VALUES(1,?,?,?,?,?,?)',
-                  ('वंशावली', '', '', '', '', '', ''))
+                  ('वंशावली', '', '', '', '', ''))
     c.commit(); c.close()
 
 init_db()
